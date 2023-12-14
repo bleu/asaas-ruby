@@ -1,0 +1,78 @@
+# frozen_string_literal: true
+
+require "asaas/resources/account"
+require "asaas/resources/account_link"
+require "asaas/resources/account_session"
+require "asaas/resources/apple_pay_domain"
+require "asaas/resources/application_fee"
+require "asaas/resources/application_fee_refund"
+
+require "asaas/resources/balance"
+require "asaas/resources/balance_transaction"
+require "asaas/resources/bank_account"
+
+require "asaas/resources/capability"
+require "asaas/resources/card"
+require "asaas/resources/cash_balance"
+require "asaas/resources/charge"
+
+require "asaas/resources/country_spec"
+require "asaas/resources/coupon"
+require "asaas/resources/credit_note"
+require "asaas/resources/credit_note_line_item"
+require "asaas/resources/customer"
+require "asaas/resources/customer_balance_transaction"
+require "asaas/resources/customer_cash_balance_transaction"
+require "asaas/resources/discount"
+require "asaas/resources/dispute"
+require "asaas/resources/ephemeral_key"
+require "asaas/resources/event"
+require "asaas/resources/exchange_rate"
+require "asaas/resources/file_link"
+
+require "asaas/resources/funding_instructions"
+
+require "asaas/resources/invoice"
+require "asaas/resources/invoice_item"
+require "asaas/resources/invoice_line_item"
+
+require "asaas/resources/line_item"
+require "asaas/resources/login_link"
+require "asaas/resources/mandate"
+require "asaas/resources/payment_intent"
+require "asaas/resources/payment_link"
+require "asaas/resources/payment_method"
+require "asaas/resources/payment_method_configuration"
+require "asaas/resources/payment_method_domain"
+require "asaas/resources/payout"
+require "asaas/resources/person"
+require "asaas/resources/plan"
+require "asaas/resources/price"
+require "asaas/resources/product"
+require "asaas/resources/promotion_code"
+
+require "asaas/resources/refund"
+
+require "asaas/resources/reversal"
+require "asaas/resources/review"
+require "asaas/resources/setup_attempt"
+require "asaas/resources/setup_intent"
+require "asaas/resources/shipping_rate"
+
+require "asaas/resources/source"
+require "asaas/resources/source_transaction"
+require "asaas/resources/subscription"
+require "asaas/resources/subscription_item"
+require "asaas/resources/subscription_schedule"
+
+require "asaas/resources/tax_code"
+require "asaas/resources/tax_id"
+require "asaas/resources/tax_rate"
+
+require "asaas/resources/token"
+require "asaas/resources/topup"
+require "asaas/resources/transfer"
+
+require "asaas/resources/usage_record"
+require "asaas/resources/usage_record_summary"
+require "asaas/resources/webhook_endpoint"

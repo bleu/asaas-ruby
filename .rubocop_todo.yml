@@ -9,7 +9,7 @@
 # Offense count: 2
 Lint/HashCompareByIdentity:
   Exclude:
-    - 'lib/stripe/stripe_client.rb'
+    - 'lib/asaas/asaas_client.rb'
 
 # Offense count: 26
 # Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
@@ -41,13 +41,13 @@ Metrics/PerceivedComplexity:
 # Configuration parameters: MinBranchesCount.
 Style/CaseLikeIf:
   Exclude:
-    - 'lib/stripe/stripe_configuration.rb'
+    - 'lib/asaas/asaas_configuration.rb'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/CombinableLoops:
   Exclude:
-    - 'lib/stripe/stripe_client.rb'
+    - 'lib/asaas/asaas_client.rb'
 
 # Offense count: 39
 # Configuration parameters: AllowedConstants.
@@ -59,7 +59,7 @@ Style/Documentation:
 # Configuration parameters: AllowSplatArgument.
 Style/HashConversion:
   Exclude:
-    - 'lib/stripe/stripe_client.rb'
+    - 'lib/asaas/asaas_client.rb'
 
 # Offense count: 3
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -67,21 +67,20 @@ Style/HashConversion:
 # AllowedMethods: present?, blank?, presence, try, try!
 Style/SafeNavigation:
   Exclude:
-    - 'lib/stripe/instrumentation.rb'
-    - 'lib/stripe/stripe_response.rb'
+    - 'lib/asaas/instrumentation.rb'
+    - 'lib/asaas/asaas_response.rb'
 
 # Offense count: 15
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Mode.
 Style/StringConcatenation:
   Exclude:
-    - 'lib/stripe.rb'
-    - 'lib/stripe/connection_manager.rb'
-    - 'lib/stripe/multipart_encoder.rb'
-    - 'lib/stripe/oauth.rb'
-    - 'lib/stripe/resources/bank_account.rb'
-    - 'lib/stripe/resources/source.rb'
-    - 'lib/stripe/stripe_client.rb'
-    - 'test/stripe/api_resource_test.rb'
-    - 'test/stripe/stripe_client_test.rb'
-    - 'test/stripe/webhook_test.rb'
+    - 'lib/asaas.rb'
+    - 'lib/asaas/connection_manager.rb'
+    - 'lib/asaas/multipart_encoder.rb'
+    - 'lib/asaas/resources/bank_account.rb'
+    - 'lib/asaas/resources/source.rb'
+    - 'lib/asaas/asaas_client.rb'
+    - 'test/asaas/api_resource_test.rb'
+    - 'test/asaas/asaas_client_test.rb'
+    - 'test/asaas/webhook_test.rb'

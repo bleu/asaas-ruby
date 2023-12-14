@@ -15,8 +15,8 @@ Layout/FirstHashElementIndentation:
 
 Layout/LineLength:
   Exclude:
-    - "lib/stripe/object_types.rb"
-    - "lib/stripe/resources/**/*.rb"
+    - "lib/asaas/object_types.rb"
+    - "lib/asaas/resources/**/*.rb"
     - "test/**/*.rb"
 
 Metrics/BlockLength:
@@ -33,7 +33,7 @@ Metrics/ClassLength:
     - "test/**/*.rb"
 
 Metrics/MethodLength:
-  # There's ~2 long methods in `StripeClient` and one in `NestedResource`. If
+  # There's ~2 long methods in `AsaasClient` and one in `NestedResource`. If
   # we want to truncate those a little, we could move this to be closer to ~30
   # (but the default of 10 is probably too short).
   Max: 55

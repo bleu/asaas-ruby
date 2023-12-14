@@ -1,7 +1,7 @@
 .PHONY: update-version codegen-format test ci-test
 update-version:
 	@echo "$(VERSION)" > VERSION
-	@perl -pi -e 's|VERSION = "[.\-\w\d]+"|VERSION = "$(VERSION)"|' lib/stripe/version.rb
+	@perl -pi -e 's|VERSION = "[.\-\w\d]+"|VERSION = "$(VERSION)"|' lib/asaas/version.rb
 
 codegen-format:
 	bundle install --quiet

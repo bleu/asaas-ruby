@@ -58,14 +58,14 @@ body:
     id: lib-version
     attributes:
       label: Library version
-      placeholder: stripe-ruby v5.52.0
+      placeholder: asaas-ruby v5.52.0
     validations:
       required: true
   - type: input
     id: api-version
     attributes:
       label: API version
-      description: See [Versioning](https://stripe.com/docs/api/versioning) in the API Reference to find which version you're using
+      description: See [Versioning](https://asaas.com/docs/api/versioning) in the API Reference to find which version you're using
       placeholder: "2020-08-27"
     validations:
       required: true
