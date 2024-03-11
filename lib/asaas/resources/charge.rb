@@ -11,7 +11,7 @@ module Asaas
     extend Asaas::APIOperations::Search
     include Asaas::APIOperations::Save
 
-    OBJECT_NAME = "charge"
+    OBJECT_NAME = "payment"
 
     def capture(params = {}, opts = {})
       request_asaas_object(
