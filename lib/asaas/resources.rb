@@ -15,6 +15,7 @@ require "asaas/resources/capability"
 require "asaas/resources/card"
 require "asaas/resources/cash_balance"
 require "asaas/resources/charge"
+require "asaas/resources/installment"
 
 require "asaas/resources/country_spec"
 require "asaas/resources/coupon"

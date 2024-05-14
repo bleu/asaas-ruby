@@ -24,6 +24,7 @@ module Asaas
         Card::OBJECT_NAME => Card,
         CashBalance::OBJECT_NAME => CashBalance,
         Charge::OBJECT_NAME => Charge,
+        Installment::OBJECT_NAME => Installment,
         CountrySpec::OBJECT_NAME => CountrySpec,
         Coupon::OBJECT_NAME => Coupon,
         CreditNote::OBJECT_NAME => CreditNote,
