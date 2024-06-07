@@ -12,19 +12,19 @@ module Asaas
 
     OBJECT_NAME = "subscription"
 
-    def cancel(params = {}, opts = {})
+    def deactivate(params = {}, opts = {})
       request_asaas_object(
-        method: :delete,
-        path: format("/v1/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(self["id"]) }),
-        params: params,
+        method: :put,
+        path: format("/v3/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(self["id"]) }),
+        params: params.merge(status: "INACTIVE"),
         opts: opts
       )
     end
 
-    def delete_discount(params = {}, opts = {})
+    def delete(params = {}, opts = {})
       request_asaas_object(
         method: :delete,
-        path: format("/v1/subscriptions/%<subscription_exposed_id>s/discount", { subscription_exposed_id: CGI.escape(self["id"]) }),
+        path: format("/v3/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(self["id"]) }),
         params: params,
         opts: opts
       )
@@ -39,19 +39,19 @@ module Asaas
       )
     end
 
-    def self.cancel(subscription_exposed_id, params = {}, opts = {})
+    def self.deactivate(subscription_exposed_id, params = {}, opts = {})
       request_asaas_object(
-        method: :delete,
-        path: format("/v1/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(subscription_exposed_id) }),
-        params: params,
+        method: :put,
+        path: format("/v3/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(subscription_exposed_id) }),
+        params: params.merge(status: "INACTIVE"),
         opts: opts
       )
     end
 
-    def self.delete_discount(subscription_exposed_id, params = {}, opts = {})
+    def self.delete(subscription_exposed_id, params = {}, opts = {})
       request_asaas_object(
         method: :delete,
-        path: format("/v1/subscriptions/%<subscription_exposed_id>s/discount", { subscription_exposed_id: CGI.escape(subscription_exposed_id) }),
+        path: format("/v3/subscriptions/%<subscription_exposed_id>s", { subscription_exposed_id: CGI.escape(subscription_exposed_id) }),
         params: params,
         opts: opts
       )
