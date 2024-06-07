@@ -463,9 +463,10 @@ module Asaas
       # to send a multipart-encoded body. `body_log` is produced separately as
       # a log-friendly variant of the encoded form. File objects are displayed
       # as such instead of as their file contents.
-      body, body_log =
+      _, body_log =
         body_params ? encode_body(body_params, headers) : [nil, nil]
 
+      body = body_params ? body_params.to_json : nil
       # stores information on the request we're about to make so that we don't
       # have to pass as many parameters around for logging.
       context = RequestLogContext.new
@@ -814,7 +815,8 @@ module Asaas
         "User-Agent" => user_agent,
         # "Authorization" => "Bearer #{api_key}",
         "access_token" => api_key,
-        "Content-Type" => "application/x-www-form-urlencoded",
+        # "Content-Type" => "application/x-www-form-urlencoded",
+        "Content-Type" => "application/json",
       }
 
       if config.enable_telemetry? && !@last_request_metrics.nil?
