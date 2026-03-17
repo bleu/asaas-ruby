@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
 module Asaas
-  # TODO: doc.
+  # Installments allow you to charge a customer with a fixed number of payments.
+  #
+  # Related guide: [Creating installments](https://docs.asaas.com/reference/criar-nova-cobranca-parcelada)
   class Installment < APIResource
+    extend Asaas::APIOperations::Create
+    extend Asaas::APIOperations::Delete
+    extend Asaas::APIOperations::List
     extend Asaas::APIOperations::Search
     include Asaas::APIOperations::Save
-    extend Asaas::APIOperations::List
 
     OBJECT_NAME = "installment"
 
@@ -17,6 +21,7 @@ module Asaas
       "/v3/installments/#{CGI.escape(id)}"
     end
 
+    # Retrieve installment payments
     def self.payments(installment, params = {}, opts = {})
       request_asaas_object(
         method: :get,
